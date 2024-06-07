@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Space Grotesk", sans-serif;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &::before{
+        content: "";
+        position: absolute;
+        width: 36.5%;
+        height: 100%;
+        background-image: url(images/bg-main-desktop.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+
+    }
+
+    .message{
+        display: none;
+        color: hsl(0, 100%, 66%);
+        font-weight: bold;
+        font-size: 11px;
+    }
+
+    input[type="submit"]{
+        width: 100%;
+        height: 45px;
+        background-color: hsl(278, 68%, 11%);
+        color: white !important;
+        letter-spacing: 1px;
+        font-weight: 600 !important;
+        cursor: pointer;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+    }
+
+    .content__all{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 6rem;
+        padding: 1rem;
+        .content__CardsUsuary{
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 2rem;
+
+            .contentCardFront{
+                width: 453px;
+                height: 251px;
+                padding: 2rem;
+                border-radius: 7px;
+                background-image: url(images/bg-card-front.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                color: white;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                margin-right: 6rem;
+
+                filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.142));
+
+                .content__stylesCircles{
+                    width: 100%;
+                    height: 50px;
+
+                    display: flex;
+                    align-items: center;
+                    gap: 16px;
+
+                    .CircleBig{
+                        width: 50px;
+                        height: 50px;
+                        background-color: white;
+                        border-radius: 50%;
+                    }
+                    .CircleSmall{
+                        width: 25px;
+                        height: 25px;
+                        border: 2px solid white;
+                        border-radius: 50%;
+                    }
+
+                }
+                
+                .content__footerCard{
+                    width: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.6rem;
+
+                    #numberCard{
+                        font-size: 1.85rem;
+                        font-weight: 600;
+                        letter-spacing: 3px;
+                    }
+
+                    .contentInformationUsuary--and--card{
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-weight: 400;
+                        font-size: 14px;
+
+                        .nameUsuary{text-transform: uppercase; letter-spacing: 1px;}
+                    }
+                }
+
+            }
+            
+            .contentCardBack{
+                width: 453px;
+                height: 251px;
+                background-image: url(images/bg-card-back.png);
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                border-radius: 7px;
+                color: white;
+                display: flex;
+                align-items: center;
+                justify-content: end;
+                padding-right: 3rem;
+                padding-bottom: .2rem;
+                filter: drop-shadow(0px 0px 20px rgba(0, 0, 0, 0.142));
+
+
+                margin-left: 5rem;
+
+                .cvcCard{letter-spacing: 2px; font-weight: 600;}
+            }
+        }
+
+        .contentForm--infoCards{
+            width: 370px;
+
+            .spaceInputs{
+                margin-bottom: 1.5rem;
+            }
+
+            .asignamentInputs{
+                display: block;
+                font-size: 12px;
+                margin-bottom: 4px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                font-weight: bold;
+                color: hsl(278, 68%, 11%);
+            }
+
+            input[type="text"]{
+                position: relative;
+                width: 100%;
+                height: 45px;
+                border-radius: 8px;
+                
+                outline: none;
+                border: 1px solid hsl(270, 3%, 87%);
+                text-indent: .7rem;
+                color: hsl(278, 68%, 11%);
+                font-size: 16px;
+                font-weight: bold;
+                letter-spacing: 1px;
+                border-radius: 8px;
+                margin-bottom: 2px;
+
+                &::placeholder{
+                    color: hsl(0, 0%, 74%);
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    font-size: 15px;
+                }
+
+                &:hover{
+                    border-color: hsl(249, 99%, 64%);
+                }
+            }
+
+            .content_ImportantInfoCard{
+                width: 100%;
+                display: flex;
+                gap: 1.5rem;
+                margin-bottom: 1rem;
+                
+                .content__EXPDATACARD{
+                    .content__DATA{
+                        width: 160px;
+                        display: flex;
+                        gap: 1rem;
+                    }
+                }   
+                
+
+                .contentCVC{
+                    width: 100%;
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+
+        .contentSubmitState{
+            width: 370px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+
+            .contentThanks{
+                margin-top: 2rem;
+                
+                .stylesC{display: block; text-align: center;}
+                .titleThanks{
+                    color: black;
+                    font-size: 2rem;
+                    font-weight: 600;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin-bottom: 1rem;
+                }
+
+                .txtThanks{
+                    color: hsl(0, 0%, 67%);
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}
+
+
+/*MEDIA QUERYS*/
+@media screen and (min-width: 709px) and (max-width: 900px){
+    body{
+        .content__all{
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            .content__CardsUsuary{
+                position: relative;
+                width: 346px;
+                height: 360px;
+                display: flex;
+                flex-direction: column-reverse;
+                
+                .contentCardFront{
+                    width: 290px;
+                    height: 170px;
+                    padding: 1.3rem;
+                    .content__stylesCircles{
+                        .CircleBig{
+                            width: 37px;
+                            height: 37px;
+                        }
+                        .CircleSmall{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .content__footerCard{
+                        gap: 1rem;
+                        #numberCard{font-size: 1.07rem;}
+                        .contentInformationUsuary--and--card{font-size: 9px;}
+                    }
+                }
+
+                .contentCardBack{
+                    width: 282px;
+                    height: 170px;
+                    margin-left: 3.8rem;
+                    padding-right: 1.6rem;
+                    padding-bottom: .1rem;
+
+                    .cvcCard{
+                        letter-spacing: 2px; 
+                        font-weight: 600;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .contentForm--infoCards{
+                width: 100%;
+                border: 2px soldi blue;
+                .content_ImportantInfoCard{
+                    margin-bottom: .5rem;
+                    width: 100%;
+                }
+            }
+
+            .contentSubmitState{
+                width: 100%;
+            }
+        }
+    }  
+}
+
+@media screen and (max-width: 708px) {
+    body{
+        &::before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 35%;
+            background-image: url(images/bg-main-mobile.png);
+    
+        }
+
+        .content__all{
+            display: block;
+            flex-direction: column;
+            width: 100%;
+            padding: 1rem;
+            gap: 0;
+            .content__CardsUsuary{
+                position: relative;
+                width: 100%;
+                height: 300px;
+                display: block;
+                
+                .contentCardFront{
+                    position: relative;
+                    width: 290px;
+                    height: 170px;
+                    top: -73px;
+                    padding: 1.3rem;
+                    .content__stylesCircles{
+                        .CircleBig{
+                            width: 37px;
+                            height: 37px;
+                        }
+                        .CircleSmall{
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+
+                    .content__footerCard{
+                        gap: 1rem;
+                        #numberCard{font-size: 1.07rem;}
+                        .contentInformationUsuary--and--card{font-size: 9px;}
+                    }
+                }
+
+                .contentCardBack{
+                    width: 282px;
+                    height: 170px;
+                    margin-left: 3.8rem;
+                    padding-right: 1.4rem;
+                    padding-bottom: .1rem;
+
+                    .cvcCard{
+                        letter-spacing: 2px; 
+                        font-weight: 600;
+                        font-size: 10px;
+                    }
+                }
+            }
+
+            .contentForm--infoCards{
+                width: 100%;
+                .content_ImportantInfoCard{
+                    margin-bottom: .5rem;
+                    width: 100%;
+                }
+            }
+
+            .contentSubmitState{
+                width: 100%;
+            }
+        }
+    }
+}

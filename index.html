@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Interactive card details form</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="main.js"></script>
+</head>
+<body>
+  <main class="content__all">
+    <picture class="content__CardsUsuary">
+      <article class="contentCardBack"><span class="cvcCard clearCache">000</span></article>
+
+      <article class="contentCardFront">
+        <header class="content__stylesCircles">
+          <div class="CircleBig"></div>
+          <div class="CircleSmall"></div>
+        </header>
+
+        <footer class="content__footerCard">
+          <span id="numberCard" class="clearCache">0000 0000 0000 0000</span>
+
+          <section class="contentInformationUsuary--and--card">
+            <span class="nameUsuary clearCache">Jane Appleseed</span>
+            <span class="expCard"><span class="month clearCache">00</span>/<span class="year clearCache">00</span></span>
+          </section>
+        </footer>
+      </article>
+    </picture>
+    <form class="contentForm--infoCards">
+      <section class="content__NameAndNumberCard">
+        <div class="spaceInputs">
+          <label class="asignamentInputs">Cardholder Name</label>
+          <input type="text" class="stylesForInputs" placeholder="e.g. Jane Appleseed" id="nameInput">
+          <span class="message nameMessage">Wrong format, letters only</span>
+        </div>
+
+        <div class="spaceInputs">
+          <label class="asignamentInputs">Card Number</label>
+          <input type="text" class="stylesForInputs" placeholder="e.g. 1234 5678 9123 0000" maxlength="19" id="numberInput">
+          <span class="message numberMessage">Wrong format, numbers only</span>
+        </div>
+      </section>
+
+      <section class="content_ImportantInfoCard">
+        <section class="content__EXPDATACARD">
+          <label class="asignamentInputs">Exp. Date (MM/YY)</label>
+          <div class="content__DATA">
+            <input type="text" class="stylesForInputs" placeholder="MM" id="month" maxlength="2">
+            <input type="text" class="stylesForInputs" placeholder="YY" id="year" maxlength="2">
+          </div>
+          <span class="message monthMessage yearMessage">Can't be blank</span>
+        </section>
+
+        <section class="contentCVC">
+          <label class="asignamentInputs">CVC</label>
+          <input type="text" class="stylesForInputs" placeholder="e.g. 123" maxlength="3" id="cvc">
+          <span class="message cvcMessage">Can't be blank</span>
+        </section>
+      </section>
+      <input type="submit" value="Confirm" id="submit">
+    </form>
+
+    <article class="contentSubmitState">
+      <img src="images/icon-complete.svg" alt="">
+      
+      <section class="contentThanks">
+        <span class="titleThanks stylesC">Thank you!</span>
+        <span class="txtThanks stylesC">We've added your card details</span>
+      </section>
+
+      <input type="submit" value="Continue" class="submitContinue">
+    </article>
+
+  </main>
+
+
+  
+  
+
+  
+
+  <!-- Completed state start -->
+
+  
+  
+</body>
+</html>
